@@ -1,0 +1,31 @@
+{
+  "name": "dialog",
+  "version": "1.0.0",
+  "description": "小而美\r > create by xiaoT    \r > Email: 270199332@qq.com",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-watch": "^4.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiao-T/Dialog.git"
+  },
+  "keywords": [
+    "dialog"
+  ],
+  "author": "xiao-T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiao-T/Dialog/issues"
+  },
+  "homepage": "https://github.com/xiao-T/Dialog"
+}

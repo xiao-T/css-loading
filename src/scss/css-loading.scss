@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/**
+ * Create by xiaoT
+ * at 2015-10-30
+ */
+
+@import "reset";
+$borderColor: #ccc;
+$heighLightColor: #3c7af0;
+
+
+a {
+	text-decoration: none;
+}
+
+.flex {
+	display: flex;
+}
+.wrap {
+	width: 80%;
+	margin: 20px auto;
+}
+.loading {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #aaa;
+	position: relative;
+	-webkit-animation: loading 2s infinite;
+	&:nth-child(2) {
+		margin-left: 10px;
+		-webkit-animation: loading2 2s infinite;
+	}
+}
+@-webkit-keyframes "loading" {
+	0% {
+		transform: scale(0);
+	}
+	25% {
+		transform: scale(1.2);
+	}
+	50% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@-webkit-keyframes "loading2" {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(0);
+	}
+	75% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
