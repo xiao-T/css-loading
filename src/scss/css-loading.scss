@@ -8,7 +8,6 @@
 $borderColor: #ccc;
 $heighLightColor: #3c7af0;
 
-
 a {
 	text-decoration: none;
 }
@@ -26,13 +25,13 @@ a {
 	border-radius: 50%;
 	background-color: #aaa;
 	position: relative;
-	-webkit-animation: loading 2s infinite;
+	animation: loading 2s infinite;
 	&:nth-child(2) {
 		margin-left: 10px;
-		-webkit-animation: loading2 2s infinite;
+		animation: loading2 2s infinite;
 	}
 }
-@-webkit-keyframes "loading" {
+@keyframes "loading" {
 	0% {
 		transform: scale(0);
 	}
@@ -46,7 +45,7 @@ a {
 		transform: scale(0);
 	}
 }
-@-webkit-keyframes "loading2" {
+@keyframes "loading2" {
 	0% {
 		transform: scale(0);
 	}
