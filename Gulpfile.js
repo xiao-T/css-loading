@@ -1,4 +1,6 @@
 var gulp = require('gulp'),
+	exec = require('child_process').exec,
+	cmd = 'gulp watch',
 	plumber = require('gulp-plumber'),
 	compass = require('gulp-compass'),
 	autoprefixer = require('gulp-autoprefixer'),
@@ -9,7 +11,13 @@ var gulp = require('gulp'),
 	}
 
 gulp.task('watch', function(){
-	return gulp.watch(dir.src + '/scss/*.scss', ['compass']);
+	var scssWatcher = gulp.watch(dir.src + '/scss/*.scss', ['compass']);
+	var cssWatcher = gulp.watch(dir.src + '/css/*.css', ['autoprefixer'])
+    /*cssWatcher.on('change', function(event) {
+    	console.log(exec);
+		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+	});*/
+    return cssWatcher;
 })
 /**
  * compass 
@@ -24,11 +32,15 @@ gulp.task('compass', function(){
 			style: 'compact',
 			sass: dir.src + '/scss'
 		}))
+		.on('error', function(event){
+			console.log('compass error');
+			// exec(cmd);
+		})
 });
 gulp.task('autoprefixer', function(){
 	gulp.src(dir.src + '/css/*.css')
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions', 'IE 9']
+			browsers: ['> 1%', 'last 2 versions']
 		}))
 		.pipe(gulp.dest(dir.src + '/css'))
 })
