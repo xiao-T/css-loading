@@ -5,6 +5,7 @@
  */
 
 @import "reset";
+@import "css-loading-mixin";
 $bgColor: #FFA162;
 $borderColor: #FF4200;
 $heighLightColor: #3c7af0;
@@ -48,211 +49,23 @@ a {
 }
 
 // loading effect
-@mixin Ψ {
-	.loading {
-		width: 16px;
-		height: 16px;
-		border-radius: 50%;
-		background-color: #fff;
-		animation: Ψ 2s infinite;
-		&:nth-child(2) {
-			animation: Ψ2 2s infinite;
-		}
-	}
-	@keyframes Ψ {
-		0% {
-			transform: scale(0);
-		}
-		25% {
-			transform: scale(1.2);
-		}
-		50% {
-			transform: scale(0);
-		}
-		100% {
-			transform: scale(0);
-		}
-	}
-	@keyframes Ψ2 {
-		0% {
-			transform: scale(0);
-		}
-		50% {
-			transform: scale(0);
-		}
-		75% {
-			transform: scale(1.2);
-		}
-		100% {
-			transform: scale(0);
-		}
-	}
-}
+
 .Ψ {
 	@include Ψ;
 }
 
-
-@mixin µ {
-	width: 20px;
-	height: 20px;
-	position: relative;
-	.loading {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		position: absolute;
-		&:nth-child(1),
-		&:nth-child(2) {
-			top: -5px;
-		}
-		&:nth-child(3),
-		&:nth-child(4) {
-			bottom: -5px;
-		}
-		&:nth-child(1),
-		&:nth-child(3) {
-			left: -5px;
-		}
-		&:nth-child(2),
-		&:nth-child(4) {
-			right: -5px;
-		}
-
-		&:nth-child(1) {
-			background-color: #6AAEFF;
-			animation: µ-left-top 2s ease-in infinite;
-		}
-		&:nth-child(2) {
-			background-color: #71006A;
-			animation: µ-right-top 2s ease-in infinite;
-		}
-		&:nth-child(3) {
-			background-color: #6EFF6A;
-			animation: µ-left-bottom 2s ease-in infinite;
-		}
-		&:nth-child(4) {
-			background-color: #886200;
-			animation: µ-right-bottom 2s ease-in infinite;
-		}
-	}
-	@keyframes µ-left-top {
-		0% {
-			transform: translate(0);
-		}
-		50% {
-			transform: translate(20px, 20px);
-		}
-		100% {
-			transform: translate(0);
-		}
-	}
-	@keyframes µ-right-top {
-		0% {
-			transform: translate(0);
-		}
-		50% {
-			transform: translate(-20px, 20px);
-		}
-		100% {
-			transform: translate(0);
-		}
-	}
-	@keyframes µ-left-bottom {
-		0% {
-			transform: translate(0);
-		}
-		50% {
-			transform: translate(20px, -20px);
-		}
-		100% {
-			transform: translate(0);
-		}
-	}
-	@keyframes µ-right-bottom {
-		0% {
-			transform: translate(0);
-		}
-		50% {
-			transform: translate(-20px, -20px);
-		}
-		100% {
-			transform: translate(0);
-		}
-	}
-}
 .µ {
 	@include µ
 }
 
-@mixin £ {
-	width: 50px;
-	height: 50px;
-	border: 1px solid #fff;
-	border-radius: 100%;
-	position: relative;
-	animation: £ 1s infinite;
-	&::after {
-		content: '';
-		position: absolute;
-		left: 50%;
-		top: -5px;
-		width: 10px;
-		height: 10px;
-		background-color: #fff;
-		border-radius: 100%;
-		transform: translateX(-50%);
-	}
-	@keyframes £ {
-		0% {
-			transform: rotate(0);
-		}
-		100%{
-			transform: rotate(360deg);
-		}
-	}
-}
 .£ {
 	@include £;
 }
 
 .§ {
-	
+	@include §;
 }
-@mixin ♦ {
-	.loading {
-		width: 22px;
-		height: 14px;
-		background-color: #fff;
-		position: relative;
-		margin-left: 2px;
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			left: 0;
-			width: 0;
-			height: 0;
-			border-width: 7px 11px;
-			border-style: solid;
-		}
-		&::before {
-			top: -14px;
-			border-color: transparent transparent #fff transparent;
-		}
-		&::after {
-			bottom: -14px;
-			border-color: #fff transparent transparent transparent;
-		}
-		&:nth-of-type(6) {
-			background-color: blue;
-		}
-	}
-	.flex:nth-child(2) {
-		margin-top: 9px;
-		margin-left: 23px;
-	}
-}
+
 .♦ {
 	@include ♦;
 }
