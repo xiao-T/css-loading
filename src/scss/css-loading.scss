@@ -215,3 +215,42 @@ a {
 .£ {
 	@include £;
 }
+
+
+@mixin ♦ {
+	.loading {
+		width: 22px;
+		height: 14px;
+		background-color: #fff;
+		position: relative;
+		margin-left: 2px;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-width: 7px 11px;
+			border-style: solid;
+		}
+		&::before {
+			top: -14px;
+			border-color: transparent transparent #fff transparent;
+		}
+		&::after {
+			bottom: -14px;
+			border-color: #fff transparent transparent transparent;
+		}
+		&:nth-of-type(6) {
+			background-color: blue;
+		}
+	}
+	.flex:nth-child(2) {
+		margin-top: 9px;
+		margin-left: 23px;
+	}
+}
+.♦ {
+	@include ♦;
+}

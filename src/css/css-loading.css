@@ -247,3 +247,9 @@ a { text-decoration: underline; }
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 @keyframes £ { 0% { -webkit-transform: rotate(0); transform: rotate(0); }
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+.♦ .loading { width: 22px; height: 14px; background-color: #fff; position: relative; margin-left: 2px; }
+.♦ .loading::before, .♦ .loading::after { content: ''; position: absolute; left: 0; width: 0; height: 0; border-width: 7px 11px; border-style: solid; }
+.♦ .loading::before { top: -14px; border-color: transparent transparent #fff transparent; }
+.♦ .loading::after { bottom: -14px; border-color: #fff transparent transparent transparent; }
+.♦ .loading:nth-of-type(6) { background-color: blue; }
+.♦ .flex:nth-child(2) { margin-top: 9px; margin-left: 23px; }
