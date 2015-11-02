@@ -48,7 +48,7 @@ a {
 }
 
 // loading effect
-.Ψ {
+@mixin Ψ {
 	.loading {
 		width: 16px;
 		height: 16px;
@@ -59,37 +59,41 @@ a {
 			animation: Ψ2 2s infinite;
 		}
 	}
+	@keyframes Ψ {
+		0% {
+			transform: scale(0);
+		}
+		25% {
+			transform: scale(1.2);
+		}
+		50% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(0);
+		}
+	}
+	@keyframes Ψ2 {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			transform: scale(0);
+		}
+		75% {
+			transform: scale(1.2);
+		}
+		100% {
+			transform: scale(0);
+		}
+	}
 }
-@keyframes Ψ {
-	0% {
-		transform: scale(0);
-	}
-	25% {
-		transform: scale(1.2);
-	}
-	50% {
-		transform: scale(0);
-	}
-	100% {
-		transform: scale(0);
-	}
-}
-@keyframes Ψ2 {
-	0% {
-		transform: scale(0);
-	}
-	50% {
-		transform: scale(0);
-	}
-	75% {
-		transform: scale(1.2);
-	}
-	100% {
-		transform: scale(0);
-	}
+.Ψ {
+	@include Ψ;
 }
 
-.µ {
+
+@mixin µ {
 	width: 20px;
 	height: 20px;
 	position: relative;
@@ -132,53 +136,56 @@ a {
 			animation: µ-right-bottom 2s ease-in infinite;
 		}
 	}
+	@keyframes µ-left-top {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(20px, 20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
+	@keyframes µ-right-top {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(-20px, 20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
+	@keyframes µ-left-bottom {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(20px, -20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
+	@keyframes µ-right-bottom {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(-20px, -20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
 }
-@keyframes µ-left-top {
-	0% {
-		transform: translate(0);
-	}
-	50% {
-		transform: translate(20px, 20px);
-	}
-	100% {
-		transform: translate(0);
-	}
-}
-@keyframes µ-right-top {
-	0% {
-		transform: translate(0);
-	}
-	50% {
-		transform: translate(-20px, 20px);
-	}
-	100% {
-		transform: translate(0);
-	}
-}
-@keyframes µ-left-bottom {
-	0% {
-		transform: translate(0);
-	}
-	50% {
-		transform: translate(20px, -20px);
-	}
-	100% {
-		transform: translate(0);
-	}
-}
-@keyframes µ-right-bottom {
-	0% {
-		transform: translate(0);
-	}
-	50% {
-		transform: translate(-20px, -20px);
-	}
-	100% {
-		transform: translate(0);
-	}
+.µ {
+	@include µ
 }
 
-.£ {
+@mixin £ {
 	width: 50px;
 	height: 50px;
 	border: 1px solid #fff;
@@ -196,12 +203,15 @@ a {
 		border-radius: 100%;
 		transform: translateX(-50%);
 	}
+	@keyframes £ {
+		0% {
+			transform: rotate(0);
+		}
+		100%{
+			transform: rotate(360deg);
+		}
+	}
 }
-@keyframes £ {
-	0% {
-		transform: rotate(0);
-	}
-	100%{
-		transform: rotate(360deg);
-	}
+.£ {
+	@include £;
 }
