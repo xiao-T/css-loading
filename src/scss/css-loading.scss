@@ -48,7 +48,7 @@ a {
 }
 
 // loading effect
-.Ψ {
+@mixin Ψ {
 	.loading {
 		width: 16px;
 		height: 16px;
@@ -59,37 +59,41 @@ a {
 			animation: Ψ2 2s infinite;
 		}
 	}
+	@keyframes Ψ {
+		0% {
+			transform: scale(0);
+		}
+		25% {
+			transform: scale(1.2);
+		}
+		50% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(0);
+		}
+	}
+	@keyframes Ψ2 {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			transform: scale(0);
+		}
+		75% {
+			transform: scale(1.2);
+		}
+		100% {
+			transform: scale(0);
+		}
+	}
 }
-@keyframes Ψ {
-	0% {
-		transform: scale(0);
-	}
-	25% {
-		transform: scale(1.2);
-	}
-	50% {
-		transform: scale(0);
-	}
-	100% {
-		transform: scale(0);
-	}
-}
-@keyframes Ψ2 {
-	0% {
-		transform: scale(0);
-	}
-	50% {
-		transform: scale(0);
-	}
-	75% {
-		transform: scale(1.2);
-	}
-	100% {
-		transform: scale(0);
-	}
+.Ψ {
+	@include Ψ;
 }
 
-.µ {
+
+@mixin µ {
 	width: 20px;
 	height: 20px;
 	position: relative;
@@ -132,52 +136,124 @@ a {
 			animation: µ-right-bottom 2s ease-in infinite;
 		}
 	}
+	@keyframes µ-left-top {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(20px, 20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
+	@keyframes µ-right-top {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(-20px, 20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
+	@keyframes µ-left-bottom {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(20px, -20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
+	@keyframes µ-right-bottom {
+		0% {
+			transform: translate(0);
+		}
+		50% {
+			transform: translate(-20px, -20px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
 }
-@keyframes µ-left-top {
-	0% {
-		transform: translate(0);
+.µ {
+	@include µ
+}
+
+@mixin £ {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	position: relative;
+	animation: £ 1s infinite;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: -5px;
+		width: 10px;
+		height: 10px;
+		background-color: #fff;
+		border-radius: 100%;
+		transform: translateX(-50%);
 	}
-	50% {
-		transform: translate(20px, 20px);
-	}
-	100% {
-		transform: translate(0);
+	@keyframes £ {
+		0% {
+			transform: rotate(0);
+		}
+		100%{
+			transform: rotate(360deg);
+		}
 	}
 }
-@keyframes µ-right-top {
-	0% {
-		transform: translate(0);
-	}
-	50% {
-		transform: translate(-20px, 20px);
-	}
-	100% {
-		transform: translate(0);
-	}
-}
-@keyframes µ-left-bottom {
-	0% {
-		transform: translate(0);
-	}
-	50% {
-		transform: translate(20px, -20px);
-	}
-	100% {
-		transform: translate(0);
-	}
-}
-@keyframes µ-right-bottom {
-	0% {
-		transform: translate(0);
-	}
-	50% {
-		transform: translate(-20px, -20px);
-	}
-	100% {
-		transform: translate(0);
-	}
+.£ {
+	@include £;
 }
 
 .§ {
 	
 }
+@mixin ♦ {
+	.loading {
+		width: 22px;
+		height: 14px;
+		background-color: #fff;
+		position: relative;
+		margin-left: 2px;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-width: 7px 11px;
+			border-style: solid;
+		}
+		&::before {
+			top: -14px;
+			border-color: transparent transparent #fff transparent;
+		}
+		&::after {
+			bottom: -14px;
+			border-color: #fff transparent transparent transparent;
+		}
+		&:nth-of-type(6) {
+			background-color: blue;
+		}
+	}
+	.flex:nth-child(2) {
+		margin-top: 9px;
+		margin-left: 23px;
+	}
+}
+.♦ {
+	@include ♦;
+}
+
