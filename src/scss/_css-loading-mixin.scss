@@ -20,31 +20,19 @@
 		}
 	}
 	@keyframes Ψ-left {
-		0% {
+		0%, 50%, 100% {
 			transform: scale(0);
 		}
 		25% {
 			transform: scale(1.2);
 		}
-		50% {
-			transform: scale(0);
-		}
-		100% {
-			transform: scale(0);
-		}
 	}
 	@keyframes Ψ-right {
-		0% {
-			transform: scale(0);
-		}
-		50% {
+		0%, 50%, 100% {
 			transform: scale(0);
 		}
 		75% {
 			transform: scale(1.2);
-		}
-		100% {
-			transform: scale(0);
 		}
 	}
 }
@@ -95,47 +83,35 @@
 		}
 	}
 	@keyframes µ-left-top {
-		0% {
+		0%, 100% {
 			transform: translate(0);
 		}
 		50% {
 			transform: translate(20px, 20px);
 		}
-		100% {
-			transform: translate(0);
-		}
 	}
 	@keyframes µ-right-top {
-		0% {
+		0%, 100% {
 			transform: translate(0);
 		}
 		50% {
 			transform: translate(-20px, 20px);
 		}
-		100% {
-			transform: translate(0);
-		}
 	}
 	@keyframes µ-left-bottom {
-		0% {
+		0%, 100% {
 			transform: translate(0);
 		}
 		50% {
 			transform: translate(20px, -20px);
 		}
-		100% {
-			transform: translate(0);
-		}
 	}
 	@keyframes µ-right-bottom {
-		0% {
+		0%, 100% {
 			transform: translate(0);
 		}
 		50% {
 			transform: translate(-20px, -20px);
-		}
-		100% {
-			transform: translate(0);
 		}
 	}
 }
@@ -186,31 +162,19 @@
 		}
 	}
 	@keyframes §-first {
-		0% {
+		0%, 50%, 100% {
 			transform: translateX(0);
 		}
 		25% {
 			transform: translateX(-20px);
 		}
-		50% {
-			transform: translateX(0);
-		}
-		100% {
-			transform: translateX(0);
-		}
 	}
 	@keyframes §-last {
-		0% {
-			transform: translateX(0);
-		}
-		50% {
+		0%, 50%, 100% {
 			transform: translateX(0);
 		}
 		75% {
 			transform: translateX(20px);
-		}
-		100% {
-			transform: translateX(0);
 		}
 	}
 }
