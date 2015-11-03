@@ -1,10 +1,14 @@
 @charset "UTF-8";
 
-// loading effect
-@mixin Ψ {
+%flexCenter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+// loading effect
+@mixin Ψ {
+	@extend %flexCenter;
 	.loading {
 		width: 16px;
 		height: 16px;
@@ -167,23 +171,63 @@
 
 
 @mixin § {
-	
+	@extend %flexCenter;
+	.loading {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: #fff;
+		transform: translateZ(-1px);
+		&:first-child {
+			animation: §-first 1s ease-out infinite;
+		}
+		&:last-child {
+			animation: §-last 1s ease-out infinite;
+		}
+	}
+	@keyframes §-first {
+		0% {
+			transform: translateX(0);
+		}
+		25% {
+			transform: translateX(-20px);
+		}
+		50% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+	@keyframes §-last {
+		0% {
+			transform: translateX(0);
+		}
+		50% {
+			transform: translateX(0);
+		}
+		75% {
+			transform: translateX(20px);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
 }
+
 @mixin ♦ {
 	.flex {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@extend %flexCenter;
 		&:nth-child(1) {
 			.loading {
 				&:nth-child(1) {
-					animation: ♦-top-left 3s infinite;
+					animation: ♦-top-left 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 				}
 				&:nth-child(2) {
-					animation: ♦-top-middle 3s infinite;
+					animation: ♦-top-middle 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 				}
 				&:nth-child(3) {
-					animation: ♦-top-right 3s infinite;
+					animation: ♦-top-right 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 				}
 			}
 		}
@@ -218,13 +262,13 @@
 		margin-left: 23px;
 		.loading {
 			&:nth-child(1) {
-				animation: ♦-bottom-left 3s infinite;
+				animation: ♦-bottom-left 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 			}
 			&:nth-child(2) {
-				animation: ♦-bottom-middle 3s infinite;
+				animation: ♦-bottom-middle 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 			}
 			&:nth-child(3) {
-				animation: ♦-bottom-right 3s infinite;
+				animation: ♦-bottom-right 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 			}
 		}
 	}
@@ -259,32 +303,32 @@
 		}
 		49.994% {
 			opacity: 1;
+			transform: scale(1.1);
+		}
+		57.136% {
+			opacity: 1;
 			transform: scale(1);
 		}
-		/* 57.136% {
-			opacity: 0;
-			transform: scale(0);
-		}
 		64.278% {
-			opacity: 0;
-			transform: scale(0);
+			opacity: 1;
+			transform: scale(1);
 		}
 		71.42% {
-			opacity: 0;
-			transform: scale(0);
+			opacity: 1;
+			transform: scale(1);
 		}
 		78.562% {
-			opacity: 0;
-			transform: scale(0);
+			opacity: 1;
+			transform: scale(1);
 		}
 		85.704% {
-			opacity: 0;
-			transform: scale(0);
+			opacity: 1;
+			transform: scale(1);
 		}
 		92.846% {
-			opacity: 0;
-			transform: scale(0);
-		} */
+			opacity: 1;
+			transform: scale(1);
+		}
 		100% {
 			opacity: 1;
 			transform: scale(1);
@@ -325,28 +369,28 @@
 		}
 		57.136% {
 			opacity: 1;
+			transform: scale(1.1);
+		}
+		64.278% {
+			opacity: 1;
 			transform: scale(1);
 		}
-		/* 64.278% {
-			opacity: 0;
-			transform: scale(0);
-		}
 		71.42% {
-			opacity: 0;
-			transform: scale(0);
+			opacity: 1;
+			transform: scale(1);
 		}
 		78.562% {
-			opacity: 0;
-			transform: scale(0);
+			opacity: 1;
+			transform: scale(1);
 		}
 		85.704% {
-			opacity: 0;
-			transform: scale(0);
+			opacity: 1;
+			transform: scale(1);
 		}
 		92.846% {
-			opacity: 0;
-			transform: scale(0);
-		} */
+			opacity: 1;
+			transform: scale(1);
+		}
 		100% {
 			opacity: 1;
 			transform: scale(1);
@@ -598,6 +642,51 @@
 		100% {
 			opacity: 1;
 			transform: scale(1);
+		}
+	}
+}
+
+@mixin ♣ {
+	@extend %flexCenter;
+	.loading {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: 4px dashed #fff;
+		position: relative;
+		transform: rotate(20deg);
+		animation: ♣-left 2s linear infinite;
+		&::after {
+			content: '';
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+		&:last-child {
+			width: 20px;
+			height: 20px;
+			border: 3px dashed #fff;
+			margin-top: 37px;
+			margin-left: -8px;
+			animation: ♣-right 1s linear infinite;
+		}
+	}
+	@keyframes ♣-left {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes ♣-right {
+		0% {
+			transform: rotate(360deg);
+		}
+		100% {
+			transform: rotate(0);
 		}
 	}
 }
