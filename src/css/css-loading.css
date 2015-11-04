@@ -175,7 +175,13 @@ dialog::-webkit-backdrop { position: fixed; top: 0; bottom: 0; left: 0; right: 0
 
 dialog::backdrop { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.3); }
 
-.Ψ, .§, .♦ .flex, .♣ { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.item .origin, .Ψ, .§, .♦ .flex, .♣ { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.⊕, .⊕ .loading { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-perspective: 300px; perspective: 300px; }
+
+.⊕ .loading, .⊕::after, .⊕::before { width: 20px; height: 20px; background-color: #fff; }
+
+.item .origin, .Ψ, .§, .♦ .flex, .♣ { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
 body { background-color: #FFA162; }
 
@@ -187,7 +193,10 @@ a { text-decoration: underline; }
 
 .wrap { width: 80%; margin: 20px auto; }
 
-.item { width: 200px; height: 200px; float: left; box-sizing: border-box; border: 2px solid #fff; margin-top: -2px; margin-left: -2px; }
+.item { width: 200px; height: 200px; float: left; box-sizing: border-box; border: 2px solid #fff; margin-top: -2px; margin-left: -2px; position: relative; overflow: hidden; }
+.item .origin { position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); font-size: 16px; color: #fff; left: 0; top: 0; -webkit-transition: all .5s; transition: all .5s; -webkit-transform: translateY(-100%); -ms-transform: translateY(-100%); transform: translateY(-100%); }
+.item .origin:hover { color: blue; }
+.item:hover .origin { -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
 
 .tip { font-size: 16px; line-height: 1.5; }
 
@@ -446,3 +455,36 @@ a { text-decoration: underline; }
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 @keyframes ◊ { 0% { -webkit-transform: rotate(0); transform: rotate(0); }
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+.⊕ { position: relative; }
+.⊕ .loading { -webkit-transform: rotateZ(45deg) rotateX(45deg); transform: rotateZ(45deg) rotateX(45deg); }
+.⊕::after, .⊕::before { position: absolute; top: 0; left: 0; }
+@-webkit-keyframes ⊕-first-after { 0% { opacity: 0; -webkit-transform: rotateX(-179deg); transform: rotateX(-179deg); }
+  10% { opacity: 1; -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  20% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 1; }
+  60% { opacity: 1; }
+  70% { opacity: 1; }
+  80% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 1; } }
+@keyframes ⊕-first-after { 0% { opacity: 0; -webkit-transform: rotateX(-179deg); transform: rotateX(-179deg); }
+  10% { opacity: 1; -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  20% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 1; }
+  60% { opacity: 1; }
+  70% { opacity: 1; }
+  80% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 1; } }
+@-webkit-keyframes ⊕-first { 0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  50% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  60% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
+  90% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); } }
+@keyframes ⊕-first { 0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  50% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  60% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
+  90% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); } }
