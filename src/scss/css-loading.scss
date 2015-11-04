@@ -35,8 +35,8 @@ a {
 	margin: 20px auto;
 }
 .item {
-	width: 25%;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	float: left;
 	box-sizing: border-box;
 	border: 2px solid $borderColor;
@@ -72,5 +72,9 @@ a {
 
 .♣ {
 	@include ♣;
+}
+
+.◊ {
+	@include ◊;
 }
 
