@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ddd---3d</title>
+</head>
+<body>
+	<style>
+		.demo {
+			transform-style: preserve-3d;
+			perspective: 300px;
+			width: 20px;
+			margin: 100px auto;
+			position: relative;
+		}
+		.loading {
+			width: 20px;
+			height: 20px;
+			background-color: #ccc;
+			transform: skew(-30deg) rotateX(45deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.left {
+			width: 20px;
+			height: 20px;
+			background-color: #aaa;
+			position: absolute;
+			top: 17px;
+			left: -4px;
+		}
+		.right {
+			width: 20px;
+			height: 20px;
+			background-color: blue;
+			transform: skewY(135deg) rotateY(45deg);
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+	</style>
+	<div class="demo">
+		<div class="loading"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+</body>
+</html>
