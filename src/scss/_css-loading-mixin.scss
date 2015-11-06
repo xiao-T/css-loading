@@ -185,13 +185,28 @@
 		&:nth-child(1) {
 			.loading {
 				&:nth-child(1) {
-					animation: ♦-top-left 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
+					animation: ♦ 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 				}
 				&:nth-child(2) {
-					animation: ♦-top-middle 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
+					animation: ♦ 3s .25s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 				}
 				&:nth-child(3) {
-					animation: ♦-top-right 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
+					animation: ♦ 3s .5s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
+				}
+			}
+		}
+		&:nth-child(2) {
+			margin-top: 9px;
+			margin-left: 23px;
+			.loading {
+				&:nth-child(1) {
+					animation: ♦ 3s .75s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
+				}
+				&:nth-child(2) {
+					animation: ♦ 3s 1s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
+				}
+				&:nth-child(3) {
+					animation: ♦ 3s 1.25s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
 				}
 			}
 		}
@@ -221,22 +236,7 @@
 			border-color: #fff transparent transparent transparent;
 		}
 	}
-	.flex:nth-child(2) {
-		margin-top: 9px;
-		margin-left: 23px;
-		.loading {
-			&:nth-child(1) {
-				animation: ♦-bottom-left 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
-			}
-			&:nth-child(2) {
-				animation: ♦-bottom-middle 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
-			}
-			&:nth-child(3) {
-				animation: ♦-bottom-right 3s cubic-bezier(0.55, 0.09, 0.72, 0.26) infinite;
-			}
-		}
-	}
-	@keyframes ♦-top-left {
+	@keyframes ♦ {
 		0% {
 			opacity: 1;
 			transform: scale(1);
@@ -293,316 +293,6 @@
 			opacity: 1;
 			transform: scale(1);
 		}
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	@keyframes ♦-top-middle {
-		0% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		7.1425% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		14.284% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		21.426% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		28.568% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		35.71% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		42.852% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		49.994% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		57.136% {
-			opacity: 1;
-			transform: scale(1.1);
-		}
-		64.278% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		71.42% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		78.562% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		85.704% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		92.846% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	@keyframes ♦-top-right {
-		0% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		7.1425% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		14.284% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		21.426% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		28.568% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		35.71% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		42.852% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		49.994% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		57.136% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		64.278% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		/* 71.42% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		78.562% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		85.704% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		92.846% {
-			opacity: 0;
-			transform: scale(0);
-		} */
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	@keyframes ♦-bottom-left {
-		0% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		7.1425% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		14.284% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		21.426% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		28.568% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		35.71% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		42.852% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		49.994% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		57.136% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		64.278% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		71.42% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		/* 78.562% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		85.704% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		92.846% {
-			opacity: 0;
-			transform: scale(0);
-		} */
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	@keyframes ♦-bottom-middle {
-		0% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		7.1425% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		14.284% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		21.426% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		28.568% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		35.71% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		42.852% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		49.994% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		57.136% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		64.278% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		71.42% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		78.562% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		/* 85.704% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		92.846% {
-			opacity: 0;
-			transform: scale(0);
-		} */
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	@keyframes ♦-bottom-right {
-		0% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		7.1425% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		14.284% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		21.426% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		28.568% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		35.71% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		42.852% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		49.994% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		57.136% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		64.278% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		71.42% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		78.562% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		85.704% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		/* 92.846% {
-			opacity: 0;
-			transform: scale(0);
-		} */
 		100% {
 			opacity: 1;
 			transform: scale(1);
@@ -851,5 +541,113 @@
 	    100%   {
 	    	transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
 	    }
+	}
+}
+
+@mixin ≈ {
+	@extend %flexCenter;
+	.loading {
+		position: relative;
+		margin: 0 4px;
+		width: 5px;
+		height: 15px;
+		border-radius: 2px;
+		border: solid #690;
+		border-width: 0 1px 1px 0;
+		background: #9b2;
+		transform-origin: center bottom;
+		animation: ≈ 5s infinite;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			z-index: -1;
+			width: 5px;
+			height: 5px;
+			background: transparent;
+			box-shadow: 0 2px rgba(0,0,0,.3);
+			opacity: 0;
+  			transform-origin: 0% 0%;
+			animation: ≈-after 5s infinite;
+		}
+		@for $i from 2 through 5 {
+			&:nth-child(#{$i}) {
+				animation-delay: #{.3*(($i)-1)}s;
+				&::after {
+					animation-delay: #{.3*(($i)-1)}s;
+				}
+				@if ($i == 5) {
+					animation-name: ≈-last;
+					&::after {
+						animation-name: ≈-after-last;
+					}
+				}
+			}
+		}
+	}
+
+	@keyframes ≈ {
+		10% {
+			transform: rotate(70deg);
+		}
+		60% {
+			transform: rotate(70deg);
+		}
+		70% {
+			transform: rotate(0deg);
+		}
+	}
+	@keyframes ≈-last {
+		10% {
+			transform: rotate(90deg);
+		}
+		60% {
+			transform: rotate(90deg);
+		}
+		70% {
+			transform: rotate(0deg);
+		}
+	}
+
+	@keyframes ≈-after {
+		10% {
+			transform: rotate(-70deg);
+			width: 10px;
+			opacity: 1; 
+		}
+		60% {
+			transform: rotate(-70deg); 
+			width: 10px; 
+			opacity: 1; 
+		}
+		70% {
+			width: 5px;
+			transform: rotate(0deg); 
+			opacity: 0;
+		}
+	}
+	@keyframes ≈-after-last {
+		10% {
+			transform: rotate(-90deg);
+			width: 10px;
+			height: 2px;
+			opacity: .5; 
+			left: 3px; 
+			bottom: -1px; 
+		}
+		60% {
+			transform: rotate(-90deg);
+			width: 10px;
+			height: 2px;
+			opacity: .5; 
+			left: 3px; 
+			bottom: -1px; 
+		}
+		70% {
+			width: 5px;
+			height: 5px;
+			transform: rotate(0deg); 
+			opacity: 0;
+		}
 	}
 }
