@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 	}
 
 gulp.task('watch', function(){
-	var scssWatcher = gulp.watch(dir.src + '/scss/*.scss', ['compass']);
+	var scssWatcher = gulp.watch(dir.src + '/scss/{,*/}*.scss', ['compass']);
 	var cssWatcher = gulp.watch(dir.src + '/css/*.css', ['autoprefixer'])
     /*cssWatcher.on('change', function(event) {
     	console.log(exec);

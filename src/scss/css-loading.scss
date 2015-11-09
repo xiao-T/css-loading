@@ -5,7 +5,7 @@
  */
 
 @import "reset";
-@import "css-loading-mixin";
+@import "mixin/css-loading";
 $bgColor: #FFA162;
 $borderColor: #fff;
 $heighLightColor: #3c7af0;
@@ -117,4 +117,8 @@ a {
 
 .≈ {
 	@include ≈;
+}
+
+.∫ {
+	@include ∫;
 }
