@@ -175,13 +175,13 @@ dialog::-webkit-backdrop { position: fixed; top: 0; bottom: 0; left: 0; right: 0
 
 dialog::backdrop { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.3); }
 
-.item .origin, .Ψ, .§, .♦ .flex, .♣, .≈, .∫ { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.item .origin, .Ψ, .§, .♦ .flex, .♣, .≈ { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
 .⊕, .⊕ .loading { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-perspective: 300px; perspective: 300px; }
 
 .⊕ .loading, .⊕::after, .⊕::before { width: 20px; height: 20px; background-color: #fff; }
 
-.item .origin, .Ψ, .§, .♦ .flex, .♣, .≈, .∫ { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.item .origin, .Ψ, .§, .♦ .flex, .♣, .≈ { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
 body { background-color: #FFA162; }
 
@@ -409,11 +409,11 @@ a { text-decoration: underline; }
   60% { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); width: 10px; height: 2px; opacity: .5; left: 3px; bottom: -1px; }
   70% { width: 5px; height: 5px; -webkit-transform: rotate(0deg); transform: rotate(0deg); opacity: 0; } }
 .∫ { width: 100px; height: 40px; border-radius: 50%; position: relative; }
-.∫ .loading { width: 10px; height: 10px; border-radius: 50%; background-color: #fff; -webkit-transform: translate(50px); -ms-transform: translate(50px); transform: translate(50px); margin-right: 15px; opacity: 0; -webkit-animation: ∫-loading .8s linear infinite; animation: ∫-loading .8s linear infinite; }
-.∫ .loading:nth-child(2) { -webkit-animation-delay: .2s; animation-delay: .2s; }
-.∫ .loading:nth-child(3) { -webkit-animation-delay: .4s; animation-delay: .4s; }
-.∫ .loading:nth-child(4) { -webkit-animation-delay: .6s; animation-delay: .6s; }
-.∫::after, .∫::before { position: absolute; left: 0; height: 0; width: 0; border-width: 20px; border-style: solid; border-color: #fff transparent transparent #fff; border-radius: 50%; }
+.∫ .loading { position: absolute; right: 0; top: 15px; width: 10px; height: 10px; border-radius: 50%; background-color: #fff; opacity: 0; -webkit-animation: ∫-loading 1s linear infinite; animation: ∫-loading 1s linear infinite; }
+.∫ .loading:nth-child(2) { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+.∫ .loading:nth-child(3) { -webkit-animation-delay: 0.5s; animation-delay: 0.5s; }
+.∫ .loading:nth-child(4) { -webkit-animation-delay: 0.75s; animation-delay: 0.75s; }
+.∫::after, .∫::before { content: ''; position: absolute; left: 0; height: 0; width: 0; border-width: 20px; border-style: solid; border-color: #fff transparent transparent #fff; border-radius: 50%; }
 .∫::after { bottom: 0px; -webkit-transform: rotate(-135deg); -ms-transform: rotate(-135deg); transform: rotate(-135deg); -webkit-animation: ∫-after 1s infinite; animation: ∫-after 1s infinite; }
 .∫::before { top: 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); -webkit-animation: ∫-before 1s infinite; animation: ∫-before 1s infinite; }
 @-webkit-keyframes ∫-before { 0%, 100% { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
@@ -424,7 +424,7 @@ a { text-decoration: underline; }
   50% { -webkit-transform: rotate(-105deg); transform: rotate(-105deg); } }
 @keyframes ∫-after { 0%, 100% { -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
   50% { -webkit-transform: rotate(-105deg); transform: rotate(-105deg); } }
-@-webkit-keyframes ∫-loading { 7% { -webkit-transform: translate(50px); transform: translate(50px); opacity: 0; }
-  100% { -webkit-transform: translate(0px); transform: translate(0px); opacity: 1; } }
-@keyframes ∫-loading { 7% { -webkit-transform: translate(50px); transform: translate(50px); opacity: 0; }
-  100% { -webkit-transform: translate(0px); transform: translate(0px); opacity: 1; } }
+@-webkit-keyframes ∫-loading { 0% { -webkit-transform: translate(0px); transform: translate(0px); opacity: 0; }
+  100% { -webkit-transform: translate(-80px); transform: translate(-80px); opacity: 1; } }
+@keyframes ∫-loading { 0% { -webkit-transform: translate(0px); transform: translate(0px); opacity: 0; }
+  100% { -webkit-transform: translate(-80px); transform: translate(-80px); opacity: 1; } }
