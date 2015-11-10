@@ -435,3 +435,20 @@ a { text-decoration: underline; }
   50% { -webkit-transform: scale(1.2); transform: scale(1.2); opacity: 1; } }
 @keyframes ∩ { 0%, 100% { -webkit-transform: scale(0); transform: scale(0); opacity: 0; }
   50% { -webkit-transform: scale(1.2); transform: scale(1.2); opacity: 1; } }
+.∞ { width: 8px; height: 8px; border-radius: 50%; box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; -webkit-animation: ∞ 2s linear infinite; animation: ∞ 2s linear infinite; }
+@-webkit-keyframes ∞ { 0% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  14.285% { box-shadow: 16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  28.571% { box-shadow: 16px 16px 0 8px #6AAEFF, 16px 16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  42.857% { box-shadow: -16px 16px 0 8px #6AAEFF, -16px 16px 0 8px #71006A, -16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  57.148% { box-shadow: -16px -16px 0 8px #6AAEFF, -16px -16px 0 8px #71006A, -16px -16px 0 8px #6EFF6A, -16px -16px 0 8px #886200; }
+  71.428% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px -16px 0 8px #6EFF6A, 16px -16px 0 8px #886200; }
+  85.714% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, 16px 16px 0 8px #886200; }
+  100% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; } }
+@keyframes ∞ { 0% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  14.285% { box-shadow: 16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  28.571% { box-shadow: 16px 16px 0 8px #6AAEFF, 16px 16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  42.857% { box-shadow: -16px 16px 0 8px #6AAEFF, -16px 16px 0 8px #71006A, -16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; }
+  57.148% { box-shadow: -16px -16px 0 8px #6AAEFF, -16px -16px 0 8px #71006A, -16px -16px 0 8px #6EFF6A, -16px -16px 0 8px #886200; }
+  71.428% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px -16px 0 8px #6EFF6A, 16px -16px 0 8px #886200; }
+  85.714% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, 16px 16px 0 8px #886200; }
+  100% { box-shadow: -16px -16px 0 8px #6AAEFF, 16px -16px 0 8px #71006A, 16px 16px 0 8px #6EFF6A, -16px 16px 0 8px #886200; } }
