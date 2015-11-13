@@ -107,10 +107,6 @@ a {
 	@include ◊;
 }
 
-.⊕ {
-	@include ⊕;
-}
-
 .≡ {
 	@include ≡;
 }
@@ -133,4 +129,8 @@ a {
 
 .∏ {
 	@include ∏;
+}
+
+.ϒ {
+	@include ϒ;
 }
