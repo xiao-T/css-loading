@@ -508,3 +508,12 @@ a { text-decoration: underline; }
 @keyframes ϒ-child { 0% { -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1); transform: translate(-50%, -50%) rotate(45deg) scale(1); }
   50% { -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1, 0.8); transform: translate(-50%, -50%) rotate(45deg) scale(1, 0.8); }
   100% { -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1); transform: translate(-50%, -50%) rotate(45deg) scale(1); } }
+.ω { width: 40px; height: 40px; background-color: #fff; -webkit-animation: ω 2s linear infinite; animation: ω 2s linear infinite; }
+@-webkit-keyframes ω { 0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  50% { -webkit-transform: translateX(100%); transform: translateX(100%); }
+  55% { width: 10px; }
+  100% { width: 10px; -webkit-transform: translateX(100%); transform: translateX(100%); } }
+@keyframes ω { 0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  50% { -webkit-transform: translateX(100%); transform: translateX(100%); }
+  55% { width: 10px; }
+  100% { width: 10px; -webkit-transform: translateX(100%); transform: translateX(100%); } }
