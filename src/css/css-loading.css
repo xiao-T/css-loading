@@ -507,3 +507,18 @@ a { text-decoration: underline; }
 .λ .inner:nth-child(4) { -webkit-animation-delay: 0.4s; animation-delay: 0.4s; }
 @-webkit-keyframes λ { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 @keyframes λ { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+.η { width: 80px; height: 80px; position: relative; -webkit-animation: η 1.5s linear infinite; animation: η 1.5s linear infinite; }
+.η::after, .η::before { content: ''; position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: #fff; top: 30px; left: 30px; }
+.η::after { -webkit-animation: η-after 1.5s linear infinite; animation: η-after 1.5s linear infinite; }
+.η::before { -webkit-animation: η-before 1.5s linear infinite; animation: η-before 1.5s linear infinite; }
+@-webkit-keyframes η { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes η { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@-webkit-keyframes η-after { 50% { -webkit-transform: translateX(-30px); transform: translateX(-30px); } }
+@keyframes η-after { 50% { -webkit-transform: translateX(-30px); transform: translateX(-30px); } }
+@-webkit-keyframes η-before { 50% { -webkit-transform: translateX(30px); transform: translateX(30px); } }
+@keyframes η-before { 50% { -webkit-transform: translateX(30px); transform: translateX(30px); } }
+.ε { width: 10px; height: 10px; opacity: 0; -webkit-transform: rotate(0) scale(0.2); -ms-transform: rotate(0) scale(0.2); transform: rotate(0) scale(0.2); position: relative; -webkit-animation: ε 1.5s ease-in-out alternate infinite; animation: ε 1.5s ease-in-out alternate infinite; }
+.ε::after, .ε::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; border-radius: 50%; }
+.ε::before { left: -20px; }
+@-webkit-keyframes ε { 100% { -webkit-transform: rotate(360deg) scale(1.2); transform: rotate(360deg) scale(1.2); opacity: 1; } }
+@keyframes ε { 100% { -webkit-transform: rotate(360deg) scale(1.2); transform: rotate(360deg) scale(1.2); opacity: 1; } }
